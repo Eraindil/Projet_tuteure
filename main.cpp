@@ -11,6 +11,13 @@
  *      Author: eraindil
  */
 
+/*
+ * main.cpp
+ *
+ *  Created on: 10 oct. 2013
+ *      Author: eraindil
+ */
+
 #include <LEDA/graph/graph.h>
 
 using namespace leda;
@@ -44,5 +51,3 @@ int main()
 
   return 0;
 }
-
-
