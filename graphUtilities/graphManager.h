@@ -18,9 +18,33 @@
  * \class GraphManager
  * \brief is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly.
  */
-class GraphManager{
+
+template<typename tE,typename tN> class GraphManager{
 
 public:
+
+	GraphManager(int , int);
+	GraphManager(string);
+	~GraphManager(void);
+
+	leda::graph getGraphO(void);
+	std::list<leda::graph> getChild(void);
+
+	void afficheGraphO(void);
+	void afficheChild(void);
+	void afficheSpecificChild(int);
+
+private:
+
+	leda::ugraph<tN,tE> graphO;
+	std::list<leda::graph> child;
+
+	/**
+	 * \todo
+	 * -Liste de chemin d'un point A à un point B
+	 * -Liste des plus court chemin
+	 *
+	 */
 
 	/**
 	 * \fn genRandomGraph(int n, int e)
@@ -29,7 +53,7 @@ public:
 	 * @param e the number of edge
 	 * @return ugraph
 	 */
-	ugraph genRandomGraph(int n, int e);
+	leda::ugraph genRandomGraph(int , int);
 
 	/**
 	 * \fn genGraphFromFile
@@ -37,7 +61,14 @@ public:
 	 * @param place
 	 * @return ugraph
 	 */
-	ugraph genGraphFromFile(string place);
+	leda::ugraph genGraphFromFile(string);
+
+	tN genRandomStructNode(void);
+
+	tE genRandomStructEdge(void);
+
+
+
 
 };
 

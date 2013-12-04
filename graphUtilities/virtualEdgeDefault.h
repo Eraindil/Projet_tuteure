@@ -5,8 +5,8 @@
  *      Author: eraindil
  */
 
-#ifndef STRUCTEDGE_H_
-#define STRUCTEDGE_H_
+#ifndef VIRTUALEDGEDEAFULT_H_
+#define VIRTUALEDGEDEAFULT_H_
 
 #include <iostream>;
 
@@ -16,7 +16,7 @@ using namespace std;
  * \struct structEdge
  * \brief Contains parameters of Edge.
  */
-struct structEdge{
+struct VirtualEdgeDefault{
 	int quality; /*!<Representation of the quality of the real line */
 	int length; /*!< Representation of the length of the real line*/
 
@@ -24,4 +24,4 @@ struct structEdge{
 };
 
 
-#endif /* STRUCTEDGE_H_ */
+#endif /* VIRTUALEDGEDEAFULT_H_ */
