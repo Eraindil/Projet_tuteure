@@ -65,37 +65,26 @@
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;structNode.h&gt;</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classGraphManager.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGraphManager.html">GraphManager</a>{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    leda::ugraph <a class="code" href="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b">genRandomGraph</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> e);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    leda::ugraph <a class="code" href="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9">genGraphFromFile</a>(<span class="keywordtype">string</span> place);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classGraphManager.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGraphManager.html">GraphManager</a>{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ugraph <a class="code" href="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b">genRandomGraph</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> e);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ugraph <a class="code" href="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9">genGraphFromFile</a>(<span class="keywordtype">string</span> place);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    leda::ugraph graphO;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structstructNode.html">structNode</a> genRandomStructNode();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structstructEdge.html">structEdge</a> genRandomStructEdge();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHMANAGER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classGraphManager_html"><div class="ttname"><a href="classGraphManager.html">GraphManager</a></div><div class="ttdoc">is a class that create an manage some graph. This class can create paramethized ugraph from a file or...</div><div class="ttdef"><b>Definition:</b> graphManager.h:22</div></div>
-<div class="ttc" id="structstructEdge_html"><div class="ttname"><a href="structstructEdge.html">structEdge</a></div><div class="ttdoc">Contains parameters of Edge. </div><div class="ttdef"><b>Definition:</b> structEdge.h:19</div></div>
-<div class="ttc" id="structstructNode_html"><div class="ttname"><a href="structstructNode.html">structNode</a></div><div class="ttdoc">Contains parameters of Node. </div><div class="ttdef"><b>Definition:</b> structNode.h:17</div></div>
-<div class="ttc" id="classGraphManager_html_aa01d24fb185701aaab0fc7f2ac70640b"><div class="ttname"><a href="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b">GraphManager::genRandomGraph</a></div><div class="ttdeci">leda::ugraph genRandomGraph(int n, int e)</div><div class="ttdoc">This creates a random undirected graph with n nodes and e edge. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:10</div></div>
-<div class="ttc" id="classGraphManager_html_acbbbcd2df22832be21867236d60cc8e9"><div class="ttname"><a href="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9">GraphManager::genGraphFromFile</a></div><div class="ttdeci">leda::ugraph genGraphFromFile(string place)</div><div class="ttdoc">This creates a undirected graph from a GML graph. </div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHMANAGER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classGraphManager_html"><div class="ttname"><a href="classGraphManager.html">GraphManager</a></div><div class="ttdoc">is a class that create an manage some graph. This class can create paramethized ugraph from a file or...</div><div class="ttdef"><b>Definition:</b> graphManager.h:21</div></div>
+<div class="ttc" id="classGraphManager_html_aa01d24fb185701aaab0fc7f2ac70640b"><div class="ttname"><a href="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b">GraphManager::genRandomGraph</a></div><div class="ttdeci">ugraph genRandomGraph(int n, int e)</div><div class="ttdoc">This creates a random undirected graph with n nodes and e edge. </div></div>
+<div class="ttc" id="classGraphManager_html_acbbbcd2df22832be21867236d60cc8e9"><div class="ttname"><a href="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9">GraphManager::genGraphFromFile</a></div><div class="ttdeci">ugraph genGraphFromFile(string place)</div><div class="ttdoc">This creates a undirected graph from a GML graph. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 27 2013 14:24:54 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Nov 27 2013 10:08:53 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
