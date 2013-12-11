@@ -1,19 +1,6 @@
 /*
  * main.cpp
  *
- *  Created on: 6 nov. 2013
- *      Author: eraindil
- */
-/*
- * main.cpp
- *
- *  Created on: 10 oct. 2013
- *      Author: eraindil
- */
-
-/*
- * main.cpp
- *
  *  Created on: 10 oct. 2013
  *      Author: eraindil
  */
@@ -22,5 +9,28 @@
 
 int main()
 {
-	GraphManager gm = new GraphManager(7,6);
+	GraphManager *gm = new GraphManager(7,6);
+
+	return 0;
 }
+/*
+#include <LEDA/graphics/graphwin.h>
+#include <LEDA/graph/graph.h>
+
+int main()
+{
+	leda::GRAPH<int,int> G;
+	leda::random_graph(G ,7,6);
+
+	leda::GraphWin gw(G);
+	leda::node v; leda::edge e;
+
+	gw.set_node_label_type(leda::data_label);
+	gw.set_edge_label_type(leda::data_label);
+
+	gw.display();
+	gw.edit();
+
+	return 0;
+}
+*/

@@ -7,8 +7,8 @@
 
 #include "graphManager.h"
 
-GraphManager::GraphManager(int e,int n){
-	leda::random_graph(this->graphO, e, n);
+GraphManager::GraphManager(int n,int e){
+	leda::random_graph(this->graphO, n, e);
 	std::srand(1);
 	leda::node v;
 	forall_nodes(v,this->graphO){
@@ -19,14 +19,14 @@ GraphManager::GraphManager(int e,int n){
 		this->graphO[ed].push_back(rand()%100);
 	}
 
-	leda::GraphWin gw(this->graphO);
+	//leda::GraphWin gw(this->graphO);
 
-	gw.display();
-	gw.edit();
+	//gw.display();
+	//gw.edit();
 }
 
-GraphManager::GraphManager(std::string n){
-
+GraphManager::GraphManager(leda::string str){
+	this->graphO.read(str);
 }
 
 

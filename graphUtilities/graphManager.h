@@ -13,7 +13,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
-#include <LEDA/graphics/graphwin.h>
+//#include <LEDA/graphics/graphwin.h>
 
 /**
  * \class GraphManager
@@ -23,12 +23,12 @@ class GraphManager{
 
 public:
 
-	GraphManager(int e, int n);
-	GraphManager(std::string n);
+	GraphManager(int n, int e);
+	GraphManager(leda::string str);
 	~GraphManager(void);
 
 	leda::graph getGraphO(void);
-	std::vector<leda::GRAPH<leda::node,leda::edge> > getChild(std::string n);
+	std::vector<leda::GRAPH<leda::node,leda::edge> > getChild(std::string str);
 
 	//void afficheGraphO(void);
 	//void afficheChild(void);
