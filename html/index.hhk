@@ -4,33 +4,8 @@
 <param name="FrameName" value="right">
 </OBJECT>
 <UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9"><param name="Name" value="genGraphFromFile"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b"><param name="Name" value="genRandomGraph"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html"><param name="Name" value="GraphManager"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#acbbbcd2df22832be21867236d60cc8e9"><param name="Name" value="genGraphFromFile"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b"><param name="Name" value="genRandomGraph"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#a40917f9068fc07ec49ea902a54e5966b"><param name="Name" value="length"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#a0e7d07a3290dfa9881749da1440a588e"><param name="Name" value="name"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#a0e7d07a3290dfa9881749da1440a588e"><param name="Name" value="structEdge"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructNode.html#a93a471b53af6dd948154d0d23e987863"><param name="Name" value="structNode"></OBJECT>
-  </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="md_README.html"><param name="Name" value="Projet_tuteure"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#aab7ee24834361ad80f95975372919e66"><param name="Name" value="quality"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html"><param name="Name" value="structEdge"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#a40917f9068fc07ec49ea902a54e5966b"><param name="Name" value="length"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#a0e7d07a3290dfa9881749da1440a588e"><param name="Name" value="name"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructEdge.html#aab7ee24834361ad80f95975372919e66"><param name="Name" value="quality"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructNode.html"><param name="Name" value="structNode"></OBJECT>
-  <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructNode.html#a93a471b53af6dd948154d0d23e987863"><param name="Name" value="name"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructNode.html#a4450e0a9d3d6df71d7164ebbdc7bd048"><param name="Name" value="timeT"></OBJECT>
-  </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="structstructNode.html#a4450e0a9d3d6df71d7164ebbdc7bd048"><param name="Name" value="timeT"></OBJECT>
 </UL>
 </BODY>
 </HTML>

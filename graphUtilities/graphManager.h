@@ -8,12 +8,10 @@
 #ifndef GRAPHMANAGER_H_
 #define GRAPHMANAGER_H_
 
-#include <LEDA/graph/graph.h>
-#include <LEDA/graph/ugraph.h>
-#include <iostream>
-#include <map>
-#include <vector>
-//#include <LEDA/graphics/graphwin.h>
+#include <ogdf/basic/Graph.h>
+#include <ogdf/basic/GraphAttributes.h>
+#include <ogdf/basic/graph_generators.h>
+#include <ogdf/basic/String.h>
 
 /**
  * \class GraphManager
@@ -24,20 +22,19 @@ class GraphManager{
 public:
 
 	GraphManager(int n, int e);
-	GraphManager(leda::string str);
+	GraphManager(ogdf::String str);
 	~GraphManager(void);
 
-	leda::graph getGraphO(void);
-	std::vector<leda::GRAPH<leda::node,leda::edge> > getChild(std::string str);
-
-	//void afficheGraphO(void);
-	//void afficheChild(void);
-	//void afficheSpecificChild(int);
+	void exportGML(ogdf::String str);
+	void exportSVG(ogdf::String str);
+	void shortestPathFrom(int e);
 
 private:
 
-	leda::UGRAPH<std::vector<int>,std::vector<int> > graphO;
-	std::map<std::string,std::vector<leda::GRAPH<leda::node,leda::edge> > > child;
+	ogdf::Graph graphO;
+	ogdf::GraphAttributes attributeGraphO;
+	//std::vector<ogdf::Graph> childGraph;
+	//std::vector<ogdf::GraphAttributes> childGraphAttribute;
 
 };
 
