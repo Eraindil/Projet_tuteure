@@ -6,6 +6,4 @@
 
 int main()
 {
-    GraphManager gm("Abvt.gml");
-    gm.shortestPathFrom(2);
 }

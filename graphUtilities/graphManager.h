@@ -15,9 +15,9 @@
 
 /**
  * \class GraphManager
- * \brief is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly.
+ * \brief is a class that create an manage some graph. This class can create paramethized undirected graph from a file or randomly.
  */
-class GraphManager{
+template<typename NT =int,typename ET=int> class GraphManager{
 
 public:
 
@@ -32,7 +32,8 @@ public:
 private:
 
 	ogdf::Graph graphO;
-	ogdf::GraphAttributes attributeGraphO;
+	ogdf::NodeArray<NT> nodeAttribute;
+	ogdf::EdgeArray<ET> edgeAttribute;
 	//std::vector<ogdf::Graph> childGraph;
 	//std::vector<ogdf::GraphAttributes> childGraphAttribute;
 

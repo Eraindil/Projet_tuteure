@@ -7,42 +7,32 @@
 
 #include "graphManager.h"
 
-GraphManager::GraphManager(int n,int e){
+template<typename NT, typename ET> GraphManager<NT,ET>::GraphManager(int n,int e){
 	ogdf::randomGraph(this->graphO, n, e);
 	std::srand(time(NULL));
-	this->attributeGraphO.init(this->graphO ,ogdf::GraphAttributes::nodeWeight | ogdf::GraphAttributes::edgeIntWeight );
 	ogdf::node v;
-	forall_nodes(v,this->graphO)
-		this->attributeGraphO.weight(v) = rand() %50;
-	forall_nodes(v,this->graphO)
-		std::cout << this->attributeGraphO.weight(v) << endl;
+	forall_nodes(v,this->graphO);
 	ogdf::edge ed;
-	forall_edges(ed,this->graphO)
-		this->attributeGraphO.intWeight(ed) = rand() %50;
+	forall_edges(ed,this->graphO);
 }
 
-GraphManager::GraphManager(ogdf::String str){
-	this->attributeGraphO.init(this->graphO,ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics |
-			ogdf::GraphAttributes::nodeLabel | ogdf::GraphAttributes::nodeColor |
-			ogdf::GraphAttributes::edgeColor | ogdf::GraphAttributes::edgeStyle |
-			ogdf::GraphAttributes::nodeStyle | ogdf::GraphAttributes::nodeTemplate);
-	this->attributeGraphO.readGML(this->graphO,str);
-	std::cout << this->attributeGraphO.attributes() << endl;
-}
-
-GraphManager::~GraphManager(){
+template<typename NT, typename ET> GraphManager<NT, ET>::GraphManager(ogdf::String str){
 
 }
 
-void GraphManager::exportGML(ogdf::String str){
-	this->attributeGraphO.writeGML(str);
+template<typename NT, typename ET> GraphManager<NT,ET>::~GraphManager(){
+
 }
 
-void GraphManager::exportSVG(ogdf::String str){
-	this->attributeGraphO.writeSVG(str);
+template<typename NT, typename ET> void GraphManager<NT, ET>::exportGML(ogdf::String str){
+
 }
 
-void GraphManager::shortestPathFrom(int e){
+template<typename NT, typename ET> void GraphManager<NT,ET>::exportSVG(ogdf::String str){
+
+}
+
+template<typename NT, typename ET> void GraphManager<NT, ET>::shortestPathFrom(int e){
 
 }
 
