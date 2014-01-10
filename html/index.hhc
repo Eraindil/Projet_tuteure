@@ -11,9 +11,19 @@
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#a6d93756a38455bea4d5769c304b1c417"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#ab5a4943d7a92e53835165e24cc6dfbc4"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="exportGML"><param name="Local" value="classGraphManager.html#af56ab92d484e20dcde590da2a86e8513"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="genChild"><param name="Local" value="classGraphManager.html#a86c24db57fe40798ae7dd9cd3e8d8622"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="shortestPathFrom"><param name="Local" value="classGraphManager.html#a731caf8a44e09a680cbe1766f0d68291"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
   </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="ImageNumber" value="1"></OBJECT>
   <UL>

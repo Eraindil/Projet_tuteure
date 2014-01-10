@@ -1,19 +1,129 @@
-\hypertarget{classGraphManager}{\section{Graph\-Manager Class Reference}
-\label{classGraphManager}\index{Graph\-Manager@{Graph\-Manager}}
+\hypertarget{classGraphManager}{\section{Graph\-Manager$<$ N\-T, E\-T $>$ Class Template Reference}
+\label{classGraphManager}\index{Graph\-Manager$<$ N\-T, E\-T $>$@{Graph\-Manager$<$ N\-T, E\-T $>$}}
 }
 
 
-is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly.  
+is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.  
 
 
 
 
 {\ttfamily \#include $<$graph\-Manager.\-h$>$}
 
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classGraphManager_a6d93756a38455bea4d5769c304b1c417}{Graph\-Manager} (int n, int e)
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classGraphManager}{Graph\-Manager} with a random graph with n node and e edge where n$>$e. \end{DoxyCompactList}\item 
+\hyperlink{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}{Graph\-Manager} (ogdf\-::\-String path)
+\begin{DoxyCompactList}\small\item\em create a \hyperlink{classGraphManager}{Graph\-Manager} with a graph from a gml file \end{DoxyCompactList}\item 
+void \hyperlink{classGraphManager_af56ab92d484e20dcde590da2a86e8513}{export\-G\-M\-L} (ogdf\-::\-String path)
+\begin{DoxyCompactList}\small\item\em export the current graph and its attributes to a gml file. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}{shortest\-Path\-From} (int n, bool b)
+\begin{DoxyCompactList}\small\item\em find all shortest path from a node to all other nodes. \end{DoxyCompactList}\item 
+bool \hyperlink{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}{gen\-Child} (int ar\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly. 
+\subsubsection*{template$<$typename N\-T = int, typename E\-T = int$>$class Graph\-Manager$<$ N\-T, E\-T $>$}
+
+is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classGraphManager_a6d93756a38455bea4d5769c304b1c417}{\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
+\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
+\subsubsection[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::{\bf Graph\-Manager} (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a6d93756a38455bea4d5769c304b1c417}
+
+
+Construct a \hyperlink{classGraphManager}{Graph\-Manager} with a random graph with n node and e edge where n$>$e. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & number of nodes \\
+\hline
+{\em e} & number of edge; \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}{\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
+\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
+\subsubsection[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::{\bf Graph\-Manager} (
+\begin{DoxyParamCaption}
+\item[{ogdf\-::\-String}]{path}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}
+
+
+create a \hyperlink{classGraphManager}{Graph\-Manager} with a graph from a gml file 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & of the file \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classGraphManager_af56ab92d484e20dcde590da2a86e8513}{\index{Graph\-Manager@{Graph\-Manager}!export\-G\-M\-L@{export\-G\-M\-L}}
+\index{export\-G\-M\-L@{export\-G\-M\-L}!GraphManager@{Graph\-Manager}}
+\subsubsection[{export\-G\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::export\-G\-M\-L (
+\begin{DoxyParamCaption}
+\item[{ogdf\-::\-String}]{path}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_af56ab92d484e20dcde590da2a86e8513}
+
+
+export the current graph and its attributes to a gml file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the destination path \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}{\index{Graph\-Manager@{Graph\-Manager}!gen\-Child@{gen\-Child}}
+\index{gen\-Child@{gen\-Child}!GraphManager@{Graph\-Manager}}
+\subsubsection[{gen\-Child}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::gen\-Child (
+\begin{DoxyParamCaption}
+\item[{int}]{ar\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}
+
+
+add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ar} & is the sequence of node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean, true if it's succeed. 
+\end{DoxyReturn}
+\hypertarget{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}{\index{Graph\-Manager@{Graph\-Manager}!shortest\-Path\-From@{shortest\-Path\-From}}
+\index{shortest\-Path\-From@{shortest\-Path\-From}!GraphManager@{Graph\-Manager}}
+\subsubsection[{shortest\-Path\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::shortest\-Path\-From (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{bool}]{b}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}
+
+
+find all shortest path from a node to all other nodes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & is the starting node \\
+\hline
+{\em b} & is a boolean which decide if the algorithm take the weight of edge in count. \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 

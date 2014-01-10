@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Projet Tuteure IUT Montpellier: GraphManager Class Reference</title>
+<title>Projet Tuteure IUT Montpellier: GraphManager&lt; NT, ET &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,31 +38,210 @@
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
+      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classGraphManager-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">GraphManager Class Reference</div>  </div>
+<div class="title">GraphManager&lt; NT, ET &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly.  
+<p>is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.  
  <a href="classGraphManager.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="graphManager_8h_source.html">graphManager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a6d93756a38455bea4d5769c304b1c417"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphManager.html#a6d93756a38455bea4d5769c304b1c417">GraphManager</a> (int n, int e)</td></tr>
+<tr class="memdesc:a6d93756a38455bea4d5769c304b1c417"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classGraphManager.html" title="is a class that create and manage some graph. This class can create paramethized undirected graph fro...">GraphManager</a> with a random graph with n node and e edge where n&gt;e.  <a href="#a6d93756a38455bea4d5769c304b1c417">More...</a><br/></td></tr>
+<tr class="separator:a6d93756a38455bea4d5769c304b1c417"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5a4943d7a92e53835165e24cc6dfbc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphManager.html#ab5a4943d7a92e53835165e24cc6dfbc4">GraphManager</a> (ogdf::String path)</td></tr>
+<tr class="memdesc:ab5a4943d7a92e53835165e24cc6dfbc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a <a class="el" href="classGraphManager.html" title="is a class that create and manage some graph. This class can create paramethized undirected graph fro...">GraphManager</a> with a graph from a gml file  <a href="#ab5a4943d7a92e53835165e24cc6dfbc4">More...</a><br/></td></tr>
+<tr class="separator:ab5a4943d7a92e53835165e24cc6dfbc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af56ab92d484e20dcde590da2a86e8513"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphManager.html#af56ab92d484e20dcde590da2a86e8513">exportGML</a> (ogdf::String path)</td></tr>
+<tr class="memdesc:af56ab92d484e20dcde590da2a86e8513"><td class="mdescLeft">&#160;</td><td class="mdescRight">export the current graph and its attributes to a gml file.  <a href="#af56ab92d484e20dcde590da2a86e8513">More...</a><br/></td></tr>
+<tr class="separator:af56ab92d484e20dcde590da2a86e8513"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a731caf8a44e09a680cbe1766f0d68291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphManager.html#a731caf8a44e09a680cbe1766f0d68291">shortestPathFrom</a> (int n, bool b)</td></tr>
+<tr class="memdesc:a731caf8a44e09a680cbe1766f0d68291"><td class="mdescLeft">&#160;</td><td class="mdescRight">find all shortest path from a node to all other nodes.  <a href="#a731caf8a44e09a680cbe1766f0d68291">More...</a><br/></td></tr>
+<tr class="separator:a731caf8a44e09a680cbe1766f0d68291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c24db57fe40798ae7dd9cd3e8d8622"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGraphManager.html#a86c24db57fe40798ae7dd9cd3e8d8622">genChild</a> (int ar[])</td></tr>
+<tr class="memdesc:a86c24db57fe40798ae7dd9cd3e8d8622"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter.  <a href="#a86c24db57fe40798ae7dd9cd3e8d8622">More...</a><br/></td></tr>
+<tr class="separator:a86c24db57fe40798ae7dd9cd3e8d8622"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>is a class that create an manage some graph. This class can create paramethized ugraph from a file or randomly. </p>
-</div><hr/>The documentation for this class was generated from the following files:<ul>
+<div class="textblock"><h3>template&lt;typename NT = int, typename ET = int&gt;<br/>
+class GraphManager&lt; NT, ET &gt;</h3>
+
+<p>is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a6d93756a38455bea4d5769c304b1c417"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NT , typename ET &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphManager.html">GraphManager</a>&lt; NT, ET &gt;::<a class="el" href="classGraphManager.html">GraphManager</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a <a class="el" href="classGraphManager.html" title="is a class that create and manage some graph. This class can create paramethized undirected graph fro...">GraphManager</a> with a random graph with n node and e edge where n&gt;e. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>number of nodes </td></tr>
+    <tr><td class="paramname">e</td><td>number of edge; </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab5a4943d7a92e53835165e24cc6dfbc4"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NT , typename ET &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphManager.html">GraphManager</a>&lt; NT, ET &gt;::<a class="el" href="classGraphManager.html">GraphManager</a> </td>
+          <td>(</td>
+          <td class="paramtype">ogdf::String&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>create a <a class="el" href="classGraphManager.html" title="is a class that create and manage some graph. This class can create paramethized undirected graph fro...">GraphManager</a> with a graph from a gml file </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>of the file </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="af56ab92d484e20dcde590da2a86e8513"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NT , typename ET &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphManager.html">GraphManager</a>&lt; NT, ET &gt;::exportGML </td>
+          <td>(</td>
+          <td class="paramtype">ogdf::String&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>export the current graph and its attributes to a gml file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>is the destination path </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a86c24db57fe40798ae7dd9cd3e8d8622"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NT , typename ET &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphManager.html">GraphManager</a>&lt; NT, ET &gt;::genChild </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ar</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ar</td><td>is the sequence of node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a boolean, true if it's succeed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a731caf8a44e09a680cbe1766f0d68291"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NT , typename ET &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGraphManager.html">GraphManager</a>&lt; NT, ET &gt;::shortestPathFrom </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>find all shortest path from a node to all other nodes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>is the starting node </td></tr>
+    <tr><td class="paramname">b</td><td>is a boolean which decide if the algorithm take the weight of edge in count. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>graphUtilities/<a class="el" href="graphManager_8h_source.html">graphManager.h</a></li>
 <li>graphUtilities/graphManager.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 13 2013 16:57:03 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 19 2013 14:30:29 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
