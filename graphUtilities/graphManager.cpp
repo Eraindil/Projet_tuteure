@@ -13,18 +13,28 @@ graphChild::graphChild(){
 }
 
 GraphManager::GraphManager(){
-	this->edgeAttribute.init(this->graph);
-	this->nodeAttribute.init(this->graph);
+	//this->edgeAttribute.init(this->graph); --remove--
+	//this->nodeAttribute.init(this->graph); --remove--
+
+	this->graphAttribute.init(this->graph, ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics |
+			ogdf::GraphAttributes::nodeLabel | ogdf::GraphAttributes::nodeColor | ogdf::GraphAttributes::nodeId |
+			ogdf::GraphAttributes::edgeColor | ogdf::GraphAttributes::nodeWeight);
+}
+
+GraphManager::GraphManager(ogdf::String path){
+	this();
+	this->graphAttribute.readGML(this->graph,path);
 }
 
 GraphManager::~GraphManager(){
 
 }
 
+/*
 void GraphManager::wizard(){
 	std::cout << "Welcome in the manual graph'creation." << endl;
-	char choix;
-	while(choix!='q'){
+	std::string choix;
+	while(choix!="q"){
 		std::cout << "Would like to create a random graph a), create a graph from a file b), erase current graph c), d the answer d), "<< endl << "add a node e), add an edge f), export the current graph to gml g) or quit the wizard q) ";
 		char choice;
 		std::cin >> choice;
@@ -47,6 +57,7 @@ void GraphManager::wizard(){
 		}
 	}
 }
+*/
 
 graphChild GraphManager::genChild(void){
 	graphChild gchild;
@@ -83,14 +94,13 @@ void GraphManager::exportGML(ogdf::String str){
 }
 
 void GraphManager::exportChildGml(graphChild &gC, ogdf::String path){
-	ogdf::GraphAttributes gA(this->graph,ogdf::GraphAttributes::nodeColor | ogdf::GraphAttributes::edgeColor);
 	ogdf::node n;
 	forall_nodes(n,gC.graph){
-		gA.colorNode(gC.nodeOrigin[n]) = "red";
+		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "red";
 	}
 	ogdf::edge e;
 	forall_edges(e,gC.graph){
-		gA.colorEdge(gC.edgeOrigin[e]) = "red";
+		this->graphAttribute.colorEdge(gC.edgeOrigin[e]) = "red";
 	}
-	gA.writeGML(path);
+	this->graphAttribute.writeGML(path);
 }

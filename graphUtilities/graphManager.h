@@ -33,12 +33,22 @@ public:
 
 	GraphManager(void);
 
+	GraphManager(ogdf::String path);
+
 	~GraphManager(void);
 
-	void wizard(void);
+	//void wizard(void);
 
+	/**
+	 * \fn addNode
+	 * \brief add a node to the main graph
+	 */
 	void addNode(void);
 
+	/**
+	 * \fn addEdge
+	 * \brief add an edge to the main graph
+	 */
 	void addEdge(void);
 
 	/**
@@ -49,8 +59,20 @@ public:
 	graphChild genChild(void);
 
 
+	/**
+	 * \fn addNodeChild
+	 * \brief add a node to a graph corresponding to a node of the main graph
+	 * @param gC the graph child target
+	 * @param n node from the main graph
+	 */
 	void addNodeChild(graphChild &gC, ogdf::node &n);
 
+	/**
+	 * \fn addEdgeChild
+	 * \brief add an edge to a graph corresponding to an edge of the main graph
+	 * @param gC the graph child target
+	 * @param e	edge from the main graph
+	 */
 	void addEdgeChild(graphChild & gC, ogdf::edge &e);
 
 	/**
@@ -73,8 +95,9 @@ public:
 private:
 
 	ogdf::Graph graph; /**< Contains the graph */
-	ogdf::NodeArray<int> nodeAttribute; /**< Contains the graph's nodes' attributes */
-	ogdf::EdgeArray<int> edgeAttribute; /**< Contains the graph's edges' attributes */
+	ogdf::GraphAttributes graphAttribute;
+	//ogdf::NodeArray<int> nodeAttribute; /**< Contains the graph's nodes' attributes */
+	//ogdf::EdgeArray<int> edgeAttribute; /**< Contains the graph's edges' attributes */
 	std::vector<graphChild> children; /**< Contains all children of the current graph */
 
 
