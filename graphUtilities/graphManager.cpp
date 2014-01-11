@@ -16,18 +16,23 @@ GraphManager::GraphManager(){
 	//this->edgeAttribute.init(this->graph); --remove--
 	//this->nodeAttribute.init(this->graph); --remove--
 
-	this->graphAttribute.init(this->graph, ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics |
-			ogdf::GraphAttributes::nodeLabel | ogdf::GraphAttributes::nodeColor | ogdf::GraphAttributes::nodeId |
-			ogdf::GraphAttributes::edgeColor | ogdf::GraphAttributes::nodeWeight);
+	this->init();
 }
 
 GraphManager::GraphManager(ogdf::String path){
-	this();
+	this->init();
 	this->graphAttribute.readGML(this->graph,path);
 }
 
 GraphManager::~GraphManager(){
 
+}
+
+void GraphManager::init(void){
+	this->graphAttribute.init(this->graph, ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics |
+				ogdf::GraphAttributes::nodeLabel | ogdf::GraphAttributes::nodeColor | ogdf::GraphAttributes::nodeId |
+				ogdf::GraphAttributes::edgeColor | ogdf::GraphAttributes::nodeWeight |
+				ogdf::GraphAttributes::edgeStyle | ogdf::GraphAttributes::nodeStyle);
 }
 
 /*
@@ -96,7 +101,6 @@ void GraphManager::exportGML(ogdf::String str){
 void GraphManager::exportChildGml(graphChild &gC, ogdf::String path){
 	ogdf::node n;
 	forall_nodes(n,gC.graph){
-		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "red";
 	}
 	ogdf::edge e;
 	forall_edges(e,gC.graph){

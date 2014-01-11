@@ -64,44 +64,68 @@
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;ogdf/basic/graph_generators.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;ogdf/basic/String.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classGraphManager.html">   21</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> NT=<span class="keywordtype">int</span>,<span class="keyword">typename</span> ET=<span class="keywordtype">int</span>&gt; <span class="keyword">class </span><a class="code" href="classGraphManager.html">GraphManager</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">struct </span>graphChild{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ogdf::Graph graph;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    ogdf::NodeArray&lt;ogdf::node&gt; nodeOrigin;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    ogdf::EdgeArray&lt;ogdf::edge&gt; edgeOrigin;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classGraphManager.html#a6d93756a38455bea4d5769c304b1c417">GraphManager</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">int</span> e);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    graphChild();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classGraphManager.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGraphManager.html">GraphManager</a>{</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classGraphManager.html#a6d93756a38455bea4d5769c304b1c417">GraphManager</a>(ogdf::String path);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="classGraphManager.html">GraphManager</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="classGraphManager.html">GraphManager</a>(ogdf::String path);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    ~<a class="code" href="classGraphManager.html">GraphManager</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#af56ab92d484e20dcde590da2a86e8513">exportGML</a>(ogdf::String path);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    ~<a class="code" href="classGraphManager.html">GraphManager</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//void wizard(void);</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf">addNode</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a731caf8a44e09a680cbe1766f0d68291">shortestPathFrom</a>(<span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> b);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classGraphManager.html#a86c24db57fe40798ae7dd9cd3e8d8622">genChild</a>(<span class="keywordtype">int</span> ar[]);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ogdf::Graph graph; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    ogdf::NodeArray&lt;NT&gt; nodeAttribute; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    ogdf::EdgeArray&lt;ET&gt; edgeAttribute; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::vector&lt;GraphManager&lt;ogdf::node,ogdf::edge&gt; &gt; children; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;};</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHMANAGER_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classGraphManager_html"><div class="ttname"><a href="classGraphManager.html">GraphManager</a></div><div class="ttdoc">is a class that create and manage some graph. This class can create paramethized undirected graph fro...</div><div class="ttdef"><b>Definition:</b> graphManager.h:21</div></div>
-<div class="ttc" id="classGraphManager_html_a6d93756a38455bea4d5769c304b1c417"><div class="ttname"><a href="classGraphManager.html#a6d93756a38455bea4d5769c304b1c417">GraphManager::GraphManager</a></div><div class="ttdeci">GraphManager(int n, int e)</div><div class="ttdoc">Construct a GraphManager with a random graph with n node and e edge where n&amp;gt;e. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:10</div></div>
-<div class="ttc" id="classGraphManager_html_a731caf8a44e09a680cbe1766f0d68291"><div class="ttname"><a href="classGraphManager.html#a731caf8a44e09a680cbe1766f0d68291">GraphManager::shortestPathFrom</a></div><div class="ttdeci">void shortestPathFrom(int n, bool b)</div><div class="ttdoc">find all shortest path from a node to all other nodes. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:29</div></div>
-<div class="ttc" id="classGraphManager_html_a86c24db57fe40798ae7dd9cd3e8d8622"><div class="ttname"><a href="classGraphManager.html#a86c24db57fe40798ae7dd9cd3e8d8622">GraphManager::genChild</a></div><div class="ttdeci">bool genChild(int ar[])</div><div class="ttdoc">add a child in the children array. The child is determine this the sequence of node from original gra...</div><div class="ttdef"><b>Definition:</b> graphManager.cpp:33</div></div>
-<div class="ttc" id="classGraphManager_html_af56ab92d484e20dcde590da2a86e8513"><div class="ttname"><a href="classGraphManager.html#af56ab92d484e20dcde590da2a86e8513">GraphManager::exportGML</a></div><div class="ttdeci">void exportGML(ogdf::String path)</div><div class="ttdoc">export the current graph and its attributes to a gml file. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:25</div></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#af7e1254c8c40b94ce005cef87c5b649a">addEdge</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    graphChild <a class="code" href="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928">genChild</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d">addNodeChild</a>(graphChild &amp;gC, ogdf::node &amp;n);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a9888881ba43a607e73791ddddad4444b">addEdgeChild</a>(graphChild &amp; gC, ogdf::edge &amp;e);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a08cbf91847265d125d5b58252263306c">exportGML</a>(ogdf::String path);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classGraphManager.html#a706fec263f07760311b3c186daea280a">exportChildGml</a>(graphChild &amp; gC, ogdf::String path);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    ogdf::Graph graph; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ogdf::GraphAttributes graphAttribute;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//ogdf::NodeArray&lt;int&gt; nodeAttribute; /**&lt; Contains the graph&#39;s nodes&#39; attributes */</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="comment">//ogdf::EdgeArray&lt;int&gt; edgeAttribute; /**&lt; Contains the graph&#39;s edges&#39; attributes */</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    std::vector&lt;graphChild&gt; children; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* GRAPHMANAGER_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classGraphManager_html"><div class="ttname"><a href="classGraphManager.html">GraphManager</a></div><div class="ttdoc">is a class that create and manage some graph. This class can create paramethized undirected graph fro...</div><div class="ttdef"><b>Definition:</b> graphManager.h:30</div></div>
+<div class="ttc" id="classGraphManager_html_a9433db8c77f8c9bd4744a35c7c553928"><div class="ttname"><a href="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928">GraphManager::genChild</a></div><div class="ttdeci">graphChild genChild(void)</div><div class="ttdoc">generate a graph and push it in the list of graph child. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:62</div></div>
+<div class="ttc" id="classGraphManager_html_a3857f4b72cec739b65cebcb20e74ebdf"><div class="ttname"><a href="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf">GraphManager::addNode</a></div><div class="ttdeci">void addNode(void)</div><div class="ttdoc">add a node to the main graph </div></div>
+<div class="ttc" id="classGraphManager_html_a9888881ba43a607e73791ddddad4444b"><div class="ttname"><a href="classGraphManager.html#a9888881ba43a607e73791ddddad4444b">GraphManager::addEdgeChild</a></div><div class="ttdeci">void addEdgeChild(graphChild &amp;gC, ogdf::edge &amp;e)</div><div class="ttdoc">add an edge to a graph corresponding to an edge of the main graph </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:73</div></div>
+<div class="ttc" id="classGraphManager_html_af7e1254c8c40b94ce005cef87c5b649a"><div class="ttname"><a href="classGraphManager.html#af7e1254c8c40b94ce005cef87c5b649a">GraphManager::addEdge</a></div><div class="ttdeci">void addEdge(void)</div><div class="ttdoc">add an edge to the main graph </div></div>
+<div class="ttc" id="classGraphManager_html_a6732352df1ad2fa1e6953759e960918d"><div class="ttname"><a href="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d">GraphManager::addNodeChild</a></div><div class="ttdeci">void addNodeChild(graphChild &amp;gC, ogdf::node &amp;n)</div><div class="ttdoc">add a node to a graph corresponding to a node of the main graph </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:68</div></div>
+<div class="ttc" id="classGraphManager_html_a08cbf91847265d125d5b58252263306c"><div class="ttname"><a href="classGraphManager.html#a08cbf91847265d125d5b58252263306c">GraphManager::exportGML</a></div><div class="ttdeci">void exportGML(ogdf::String path)</div><div class="ttdoc">export the current graph and its attributes to a gml file. </div><div class="ttdef"><b>Definition:</b> graphManager.cpp:92</div></div>
+<div class="ttc" id="classGraphManager_html_a706fec263f07760311b3c186daea280a"><div class="ttname"><a href="classGraphManager.html#a706fec263f07760311b3c186daea280a">GraphManager::exportChildGml</a></div><div class="ttdeci">void exportChildGml(graphChild &amp;gC, ogdf::String path)</div><div class="ttdoc">export the current graph with some color on the edges and nodes that correspond of the nodes and edge...</div><div class="ttdef"><b>Definition:</b> graphManager.cpp:96</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 19 2013 14:30:29 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 10 2014 13:23:14 for Projet Tuteure IUT Montpellier by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -1,5 +1,5 @@
-\hypertarget{classGraphManager}{\section{Graph\-Manager$<$ N\-T, E\-T $>$ Class Template Reference}
-\label{classGraphManager}\index{Graph\-Manager$<$ N\-T, E\-T $>$@{Graph\-Manager$<$ N\-T, E\-T $>$}}
+\hypertarget{classGraphManager}{\section{Graph\-Manager Class Reference}
+\label{classGraphManager}\index{Graph\-Manager@{Graph\-Manager}}
 }
 
 
@@ -13,69 +13,92 @@ is a class that create and manage some graph. This class can create paramethized
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classGraphManager_a6d93756a38455bea4d5769c304b1c417}{Graph\-Manager} (int n, int e)
-\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classGraphManager}{Graph\-Manager} with a random graph with n node and e edge where n$>$e. \end{DoxyCompactList}\item 
-\hyperlink{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}{Graph\-Manager} (ogdf\-::\-String path)
-\begin{DoxyCompactList}\small\item\em create a \hyperlink{classGraphManager}{Graph\-Manager} with a graph from a gml file \end{DoxyCompactList}\item 
-void \hyperlink{classGraphManager_af56ab92d484e20dcde590da2a86e8513}{export\-G\-M\-L} (ogdf\-::\-String path)
+\hypertarget{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}{void \hyperlink{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}{add\-Node} (void)}\label{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}
+
+\begin{DoxyCompactList}\small\item\em add a node to the main graph \end{DoxyCompactList}\item 
+\hypertarget{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}{void \hyperlink{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}{add\-Edge} (void)}\label{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}
+
+\begin{DoxyCompactList}\small\item\em add an edge to the main graph \end{DoxyCompactList}\item 
+graph\-Child \hyperlink{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}{gen\-Child} (void)
+\begin{DoxyCompactList}\small\item\em generate a graph and push it in the list of graph child. \end{DoxyCompactList}\item 
+void \hyperlink{classGraphManager_a6732352df1ad2fa1e6953759e960918d}{add\-Node\-Child} (graph\-Child \&g\-C, ogdf\-::node \&n)
+\begin{DoxyCompactList}\small\item\em add a node to a graph corresponding to a node of the main graph \end{DoxyCompactList}\item 
+void \hyperlink{classGraphManager_a9888881ba43a607e73791ddddad4444b}{add\-Edge\-Child} (graph\-Child \&g\-C, ogdf\-::edge \&e)
+\begin{DoxyCompactList}\small\item\em add an edge to a graph corresponding to an edge of the main graph \end{DoxyCompactList}\item 
+void \hyperlink{classGraphManager_a08cbf91847265d125d5b58252263306c}{export\-G\-M\-L} (ogdf\-::\-String path)
 \begin{DoxyCompactList}\small\item\em export the current graph and its attributes to a gml file. \end{DoxyCompactList}\item 
-void \hyperlink{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}{shortest\-Path\-From} (int n, bool b)
-\begin{DoxyCompactList}\small\item\em find all shortest path from a node to all other nodes. \end{DoxyCompactList}\item 
-bool \hyperlink{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}{gen\-Child} (int ar\mbox{[}$\,$\mbox{]})
-\begin{DoxyCompactList}\small\item\em add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{classGraphManager_a706fec263f07760311b3c186daea280a}{export\-Child\-Gml} (graph\-Child \&g\-C, ogdf\-::\-String path)
+\begin{DoxyCompactList}\small\item\em export the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-\subsubsection*{template$<$typename N\-T = int, typename E\-T = int$>$class Graph\-Manager$<$ N\-T, E\-T $>$}
-
 is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly. 
 
-\subsection{Constructor \& Destructor Documentation}
-\hypertarget{classGraphManager_a6d93756a38455bea4d5769c304b1c417}{\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
-\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
-\subsubsection[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::{\bf Graph\-Manager} (
-\begin{DoxyParamCaption}
-\item[{int}]{n, }
-\item[{int}]{e}
-\end{DoxyParamCaption}
-)}}\label{classGraphManager_a6d93756a38455bea4d5769c304b1c417}
-
-
-Construct a \hyperlink{classGraphManager}{Graph\-Manager} with a random graph with n node and e edge where n$>$e. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em n} & number of nodes \\
-\hline
-{\em e} & number of edge; \\
-\hline
-\end{DoxyParams}
-\hypertarget{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}{\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
-\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
-\subsubsection[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::{\bf Graph\-Manager} (
-\begin{DoxyParamCaption}
-\item[{ogdf\-::\-String}]{path}
-\end{DoxyParamCaption}
-)}}\label{classGraphManager_ab5a4943d7a92e53835165e24cc6dfbc4}
-
-
-create a \hyperlink{classGraphManager}{Graph\-Manager} with a graph from a gml file 
-
-
-\begin{DoxyParams}{Parameters}
-{\em path} & of the file \\
-\hline
-\end{DoxyParams}
-
-
 \subsection{Member Function Documentation}
-\hypertarget{classGraphManager_af56ab92d484e20dcde590da2a86e8513}{\index{Graph\-Manager@{Graph\-Manager}!export\-G\-M\-L@{export\-G\-M\-L}}
+\hypertarget{classGraphManager_a9888881ba43a607e73791ddddad4444b}{\index{Graph\-Manager@{Graph\-Manager}!add\-Edge\-Child@{add\-Edge\-Child}}
+\index{add\-Edge\-Child@{add\-Edge\-Child}!GraphManager@{Graph\-Manager}}
+\subsubsection[{add\-Edge\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Edge\-Child (
+\begin{DoxyParamCaption}
+\item[{graph\-Child \&}]{g\-C, }
+\item[{ogdf\-::edge \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a9888881ba43a607e73791ddddad4444b}
+
+
+add an edge to a graph corresponding to an edge of the main graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g\-C} & the graph child target \\
+\hline
+{\em e} & edge from the main graph \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraphManager_a6732352df1ad2fa1e6953759e960918d}{\index{Graph\-Manager@{Graph\-Manager}!add\-Node\-Child@{add\-Node\-Child}}
+\index{add\-Node\-Child@{add\-Node\-Child}!GraphManager@{Graph\-Manager}}
+\subsubsection[{add\-Node\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Node\-Child (
+\begin{DoxyParamCaption}
+\item[{graph\-Child \&}]{g\-C, }
+\item[{ogdf\-::node \&}]{n}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a6732352df1ad2fa1e6953759e960918d}
+
+
+add a node to a graph corresponding to a node of the main graph 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g\-C} & the graph child target \\
+\hline
+{\em n} & node from the main graph \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraphManager_a706fec263f07760311b3c186daea280a}{\index{Graph\-Manager@{Graph\-Manager}!export\-Child\-Gml@{export\-Child\-Gml}}
+\index{export\-Child\-Gml@{export\-Child\-Gml}!GraphManager@{Graph\-Manager}}
+\subsubsection[{export\-Child\-Gml}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::export\-Child\-Gml (
+\begin{DoxyParamCaption}
+\item[{graph\-Child \&}]{g\-C, }
+\item[{ogdf\-::\-String}]{path}
+\end{DoxyParamCaption}
+)}}\label{classGraphManager_a706fec263f07760311b3c186daea280a}
+
+
+export the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g\-C} & is the graph child \\
+\hline
+{\em path} & is the path of the output destination \\
+\hline
+\end{DoxyParams}
+\hypertarget{classGraphManager_a08cbf91847265d125d5b58252263306c}{\index{Graph\-Manager@{Graph\-Manager}!export\-G\-M\-L@{export\-G\-M\-L}}
 \index{export\-G\-M\-L@{export\-G\-M\-L}!GraphManager@{Graph\-Manager}}
-\subsubsection[{export\-G\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::export\-G\-M\-L (
+\subsubsection[{export\-G\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::export\-G\-M\-L (
 \begin{DoxyParamCaption}
 \item[{ogdf\-::\-String}]{path}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_af56ab92d484e20dcde590da2a86e8513}
+)}}\label{classGraphManager_a08cbf91847265d125d5b58252263306c}
 
 
 export the current graph and its attributes to a gml file. 
@@ -85,44 +108,20 @@ export the current graph and its attributes to a gml file.
 {\em path} & is the destination path \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}{\index{Graph\-Manager@{Graph\-Manager}!gen\-Child@{gen\-Child}}
+\hypertarget{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}{\index{Graph\-Manager@{Graph\-Manager}!gen\-Child@{gen\-Child}}
 \index{gen\-Child@{gen\-Child}!GraphManager@{Graph\-Manager}}
-\subsubsection[{gen\-Child}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::gen\-Child (
+\subsubsection[{gen\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::gen\-Child (
 \begin{DoxyParamCaption}
-\item[{int}]{ar\mbox{[}$\,$\mbox{]}}
+\item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a86c24db57fe40798ae7dd9cd3e8d8622}
+)}}\label{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}
 
 
-add a child in the children array. The child is determine this the sequence of node from original graph which is passed in parameter. 
+generate a graph and push it in the list of graph child. 
 
-
-\begin{DoxyParams}{Parameters}
-{\em ar} & is the sequence of node. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a boolean, true if it's succeed. 
+the graph\-Child generated 
 \end{DoxyReturn}
-\hypertarget{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}{\index{Graph\-Manager@{Graph\-Manager}!shortest\-Path\-From@{shortest\-Path\-From}}
-\index{shortest\-Path\-From@{shortest\-Path\-From}!GraphManager@{Graph\-Manager}}
-\subsubsection[{shortest\-Path\-From}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename N\-T , typename E\-T $>$ {\bf Graph\-Manager}$<$ N\-T, E\-T $>$\-::shortest\-Path\-From (
-\begin{DoxyParamCaption}
-\item[{int}]{n, }
-\item[{bool}]{b}
-\end{DoxyParamCaption}
-)}}\label{classGraphManager_a731caf8a44e09a680cbe1766f0d68291}
-
-
-find all shortest path from a node to all other nodes. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em n} & is the starting node \\
-\hline
-{\em b} & is a boolean which decide if the algorithm take the weight of edge in count. \\
-\hline
-\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

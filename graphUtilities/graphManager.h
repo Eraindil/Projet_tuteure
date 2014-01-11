@@ -94,6 +94,12 @@ public:
 
 private:
 
+	/**
+	 * \fn init
+	 * \brief permit to share the default constructor code.
+	 */
+	void init(void);
+
 	ogdf::Graph graph; /**< Contains the graph */
 	ogdf::GraphAttributes graphAttribute;
 	//ogdf::NodeArray<int> nodeAttribute; /**< Contains the graph's nodes' attributes */

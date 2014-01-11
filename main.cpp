@@ -3,7 +3,6 @@
 int main()
 {
 	GraphManager gm;
-	gm.wizard();
 
 
 	return 0;
