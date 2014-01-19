@@ -15,6 +15,10 @@
 #include <vector>
 #include <iostream>
 
+/**
+ * \struct graphChild
+ * \brief is a struct that contain a graph link to an other graph.
+ */
 struct graphChild{
 	ogdf::Graph graph;
 	ogdf::NodeArray<ogdf::node> nodeOrigin;
@@ -37,8 +41,6 @@ public:
 
 	~GraphManager(void);
 
-	//void wizard(void);
-
 	/**
 	 * \fn addNode
 	 * \brief add a node to the main graph
@@ -50,6 +52,10 @@ public:
 	 * \brief add an edge to the main graph
 	 */
 	void addEdge(void);
+
+	ogdf::Graph& getGraph(void);
+
+	ogdf::GraphAttributes& getGraphAttribute(void);
 
 	/**
 	 * \fn genChild
@@ -76,6 +82,12 @@ public:
 	void addEdgeChild(graphChild & gC, ogdf::edge &e);
 
 	/**
+	 * \fn getChildren
+	 * @return the vector containing all the children of the current graph.
+	 */
+	std::vector<graphChild> getChildren(void);
+
+	/**
 	 * \fn exportGML
 	 * \brief export the current graph and its attributes to a gml file.
 	 * @param path is the destination path
@@ -100,10 +112,10 @@ private:
 	 */
 	void init(void);
 
+	void readNetwork(ogdf::String path);
+
 	ogdf::Graph graph; /**< Contains the graph */
-	ogdf::GraphAttributes graphAttribute;
-	//ogdf::NodeArray<int> nodeAttribute; /**< Contains the graph's nodes' attributes */
-	//ogdf::EdgeArray<int> edgeAttribute; /**< Contains the graph's edges' attributes */
+	ogdf::GraphAttributes graphAttribute; /**< Contains the attributes of the graph */
 	std::vector<graphChild> children; /**< Contains all children of the current graph */
 
 

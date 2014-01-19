@@ -13,9 +13,6 @@ graphChild::graphChild(){
 }
 
 GraphManager::GraphManager(){
-	//this->edgeAttribute.init(this->graph); --remove--
-	//this->nodeAttribute.init(this->graph); --remove--
-
 	this->init();
 }
 
@@ -35,34 +32,13 @@ void GraphManager::init(void){
 				ogdf::GraphAttributes::edgeStyle | ogdf::GraphAttributes::nodeStyle);
 }
 
-/*
-void GraphManager::wizard(){
-	std::cout << "Welcome in the manual graph'creation." << endl;
-	std::string choix;
-	while(choix!="q"){
-		std::cout << "Would like to create a random graph a), create a graph from a file b), erase current graph c), d the answer d), "<< endl << "add a node e), add an edge f), export the current graph to gml g) or quit the wizard q) ";
-		char choice;
-		std::cin >> choice;
-		switch(choice){
-		case 'a':
-			int n,e;
-			std::cout << "Enter the number of node : " << endl;
-			std::cin >> n;
-			std::cout << "Enter the number of edge: " << endl;
-			std::cin >> e;
-			if(n>e) ogdf::randomGraph(this->graph,n,e);
-			else std::cout << "Please, the number of nodes need to be bigger than edge";
-			break;
-		case 'g':
-			std::cout << "Enter the path to the file" << endl;
-			std::string path;
-			std::cin >> path;
-			this->graph.writeGML(path.c_str());
-			break;
-		}
-	}
+ogdf::Graph& GraphManager::getGraph(void){
+	return this->graph;
 }
-*/
+
+ogdf::GraphAttributes& GraphManager::getGraphAttribute(void){
+	return this->graphAttribute;
+}
 
 graphChild GraphManager::genChild(void){
 	graphChild gchild;
@@ -83,7 +59,7 @@ void GraphManager::addEdgeChild(graphChild &gC, ogdf::edge &e){
 			source = curs;
 			src = true;
 		}
-		if(gC.nodeOrigin[curs]==e->target()){
+		else if(gC.nodeOrigin[curs]==e->target()){
 			target = curs;
 			tar=true;
 		}
@@ -94,6 +70,10 @@ void GraphManager::addEdgeChild(graphChild &gC, ogdf::edge &e){
 	}
 }
 
+std::vector<graphChild> GraphManager::getChildren(void){
+	return this->children;
+}
+
 void GraphManager::exportGML(ogdf::String str){
 
 }
@@ -101,6 +81,7 @@ void GraphManager::exportGML(ogdf::String str){
 void GraphManager::exportChildGml(graphChild &gC, ogdf::String path){
 	ogdf::node n;
 	forall_nodes(n,gC.graph){
+		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "red";
 	}
 	ogdf::edge e;
 	forall_edges(e,gC.graph){
