@@ -11,6 +11,7 @@
 #include <ogdf/basic/Graph.h>
 #include <ogdf/basic/GraphAttributes.h>
 #include <ogdf/basic/graph_generators.h>
+#include <ogdf/energybased/FMMMLayout.h>
 #include <ogdf/basic/String.h>
 #include <vector>
 #include <iostream>
@@ -40,6 +41,8 @@ public:
 	GraphManager(ogdf::String path);
 
 	~GraphManager(void);
+
+	void genRandomGraph(int n, int e);
 
 	/**
 	 * \fn addNode
@@ -87,12 +90,16 @@ public:
 	 */
 	std::vector<graphChild> getChildren(void);
 
+	void graphDefaultView(void);
+
 	/**
 	 * \fn exportGML
 	 * \brief export the current graph and its attributes to a gml file.
 	 * @param path is the destination path
 	 */
-	void exportGML(ogdf::String path);
+	void exportGML(ogdf::String path, bool defaultLayout);
+
+	void exportSVG(ogdf::String path, bool defaultLayout);
 
 	/**
 	 * \fn exportChildGml
@@ -100,7 +107,7 @@ public:
 	 * @param gC is the graph child
 	 * @param path is the path of the output destination
 	 */
-	void exportChildGml(graphChild & gC, ogdf::String path);
+	void setChildView(graphChild & gC);
 
 
 
@@ -111,8 +118,6 @@ private:
 	 * \brief permit to share the default constructor code.
 	 */
 	void init(void);
-
-	void readNetwork(ogdf::String path);
 
 	ogdf::Graph graph; /**< Contains the graph */
 	ogdf::GraphAttributes graphAttribute; /**< Contains the attributes of the graph */

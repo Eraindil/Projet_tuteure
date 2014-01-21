@@ -25,6 +25,10 @@ GraphManager::~GraphManager(){
 
 }
 
+void GraphManager::genRandomGraph(int n, int e){
+	ogdf::randomGraph(this->graph,n,e);
+}
+
 void GraphManager::init(void){
 	this->graphAttribute.init(this->graph, ogdf::GraphAttributes::nodeGraphics | ogdf::GraphAttributes::edgeGraphics |
 				ogdf::GraphAttributes::nodeLabel | ogdf::GraphAttributes::nodeColor | ogdf::GraphAttributes::nodeId |
@@ -74,18 +78,60 @@ std::vector<graphChild> GraphManager::getChildren(void){
 	return this->children;
 }
 
-void GraphManager::exportGML(ogdf::String str){
-
+void GraphManager::graphDefaultView(void){
+	ogdf::node n;
+	ogdf::edge e;
+	forall_nodes(n,this->graph){
+		this->graphAttribute.colorNode(n) = "black";
+	}
+	forall_edges(e,this->graph){
+		this->graphAttribute.colorEdge(e) = "black";
+	}
 }
 
-void GraphManager::exportChildGml(graphChild &gC, ogdf::String path){
+void GraphManager::exportGML(ogdf::String path, bool defaultLayout){
+	if(defaultLayout){
+		ogdf::node n;
+		forall_nodes(n,this->graph){
+			this->graphAttribute.width(n) = this->graphAttribute.height(n) = 10.0;
+		}
+		ogdf::FMMMLayout fmmm;
+		fmmm.useHighLevelOptions(true);
+		fmmm.unitEdgeLength(15.0);
+		fmmm.newInitialPlacement(true);
+		fmmm.qualityVersusSpeed(ogdf::FMMMLayout::qvsGorgeousAndEfficient);
+		fmmm.call(this->graphAttribute);
+		this->graphAttribute.writeGML(path);
+	}else{
+		this->graphAttribute.writeGML(path);
+	}
+}
+
+void GraphManager::exportSVG(ogdf::String path, bool defaultLayout){
+	if(defaultLayout){
+		ogdf::node n;
+		forall_nodes(n,this->graph){
+			this->graphAttribute.width(n) = this->graphAttribute.height(n) = 10.0;
+		}
+		ogdf::FMMMLayout fmmm;
+		fmmm.useHighLevelOptions(true);
+		fmmm.unitEdgeLength(15.0);
+		fmmm.newInitialPlacement(true);
+		fmmm.qualityVersusSpeed(ogdf::FMMMLayout::qvsGorgeousAndEfficient);
+		fmmm.call(this->graphAttribute);
+		this->graphAttribute.writeSVG(path);
+	}else{
+		this->graphAttribute.writeSVG(path);
+	}
+}
+
+void GraphManager::setChildView(graphChild &gC){
 	ogdf::node n;
 	forall_nodes(n,gC.graph){
-		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "red";
+		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "grey";
 	}
 	ogdf::edge e;
 	forall_edges(e,gC.graph){
-		this->graphAttribute.colorEdge(gC.edgeOrigin[e]) = "red";
+		this->graphAttribute.colorEdge(gC.edgeOrigin[e]) = "grey";
 	}
-	this->graphAttribute.writeGML(path);
 }

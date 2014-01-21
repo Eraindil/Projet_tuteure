@@ -8,18 +8,19 @@
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a9888881ba43a607e73791ddddad4444b"><param name="Name" value="addEdgeChild"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf"><param name="Name" value="addNode"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d"><param name="Name" value="addNodeChild"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a706fec263f07760311b3c186daea280a"><param name="Name" value="exportChildGml"></OBJECT>
-  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a08cbf91847265d125d5b58252263306c"><param name="Name" value="exportGML"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a1b15356c020e8d8e88d3910be51ed7e8"><param name="Name" value="exportGML"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928"><param name="Name" value="genChild"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a24cc3fef7b6609b81f27977aa7924426"><param name="Name" value="getChildren"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="structgraphChild.html"><param name="Name" value="graphChild"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html"><param name="Name" value="GraphManager"></OBJECT>
   <UL>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#af7e1254c8c40b94ce005cef87c5b649a"><param name="Name" value="addEdge"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a9888881ba43a607e73791ddddad4444b"><param name="Name" value="addEdgeChild"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf"><param name="Name" value="addNode"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d"><param name="Name" value="addNodeChild"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a706fec263f07760311b3c186daea280a"><param name="Name" value="exportChildGml"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a08cbf91847265d125d5b58252263306c"><param name="Name" value="exportGML"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a1b15356c020e8d8e88d3910be51ed7e8"><param name="Name" value="exportGML"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928"><param name="Name" value="genChild"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classGraphManager.html#a24cc3fef7b6609b81f27977aa7924426"><param name="Name" value="getChildren"></OBJECT>
   </UL>
   <LI><OBJECT type="text/sitemap"><param name="Local" value="md_README.html"><param name="Name" value="Projet_tuteure"></OBJECT>
 </UL>

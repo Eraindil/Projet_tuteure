@@ -14,6 +14,8 @@ main="Projet Tuteure IUT Montpellier","index.hhc","index.hhk","index.html","inde
 [FILES]
 graphManager_8h_source.html
 md_README.html
+structgraphChild.html
+structgraphChild-members.html
 classGraphManager.html
 classGraphManager-members.html
 graph_legend.html

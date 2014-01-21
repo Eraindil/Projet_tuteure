@@ -17,9 +17,12 @@ int main()
 		}
 	}
 
-	gm.exportChildGml(gtruc,"test.gml");
+	gm.graphDefaultView();
+	gm.exportSVG("graph.svg", true);
 
-	std::cout << "END" << endl;
+	gm.setChildView(gtruc);
+	gm.exportGML("graphSubGraph.gml", true);
+	gm.exportSVG("graphSubGraph.svg", true);
 
 	return 0;
 }
