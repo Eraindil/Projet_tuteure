@@ -125,13 +125,13 @@ void GraphManager::exportSVG(ogdf::String path, bool defaultLayout){
 	}
 }
 
-void GraphManager::setChildView(graphChild &gC){
+void GraphManager::setChildView(graphChild &gC, ogdf::String c){
 	ogdf::node n;
 	forall_nodes(n,gC.graph){
-		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = "grey";
+		this->graphAttribute.colorNode(gC.nodeOrigin[n]) = c;
 	}
 	ogdf::edge e;
 	forall_edges(e,gC.graph){
-		this->graphAttribute.colorEdge(gC.edgeOrigin[e]) = "grey";
+		this->graphAttribute.colorEdge(gC.edgeOrigin[e]) = c;
 	}
 }

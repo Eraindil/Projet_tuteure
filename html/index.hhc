@@ -11,23 +11,40 @@
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="graphChild"><param name="Local" value="structgraphChild.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphChild"><param name="Local" value="structgraphChild.html#afba68e44a51d51cba81046be0383f35b"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="edgeOrigin"><param name="Local" value="structgraphChild.html#a90ff9f6cd9e7e02c7f538563b8864535"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graph"><param name="Local" value="structgraphChild.html#a3e8eccf2686c631f78f89ce3ea7ef446"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="nodeOrigin"><param name="Local" value="structgraphChild.html#ad23326081bde17e5b81d96fe1e274076"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#a341edfa6998d7448fddea1035d937022"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#a7431235ac2e908222d0aa378769e5995"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="~GraphManager"><param name="Local" value="classGraphManager.html#aac8a4298968f5fd3698ab15d6127458a"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="addEdge"><param name="Local" value="classGraphManager.html#af7e1254c8c40b94ce005cef87c5b649a"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="addEdgeChild"><param name="Local" value="classGraphManager.html#a9888881ba43a607e73791ddddad4444b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="addNode"><param name="Local" value="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="addNodeChild"><param name="Local" value="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="exportGML"><param name="Local" value="classGraphManager.html#a1b15356c020e8d8e88d3910be51ed7e8"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="exportSVG"><param name="Local" value="classGraphManager.html#aabf0249928a4d4947338eeb8f63e6f23"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="genChild"><param name="Local" value="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="genRandomGraph"><param name="Local" value="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="getChildren"><param name="Local" value="classGraphManager.html#a24cc3fef7b6609b81f27977aa7924426"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="getGraph"><param name="Local" value="classGraphManager.html#a7e5b267d61a2826a6d02335b4f42ddfa"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="getGraphAttribute"><param name="Local" value="classGraphManager.html#a8f4ce0a6edccb171811cc601d2082584"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphDefaultView"><param name="Local" value="classGraphManager.html#a430d0dfd243c7b61c18acb26d4f9c105"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="init"><param name="Local" value="classGraphManager.html#a85a752b05da3679da38bd54599581331"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="setChildView"><param name="Local" value="classGraphManager.html#a3508477e21623f2fecee86bd10f16337"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="children"><param name="Local" value="classGraphManager.html#ae216060adf39a4bfa50e2384154f08a3"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graph"><param name="Local" value="classGraphManager.html#a7ab7072cdcb7dd0dff4d2f013afb4265"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphAttribute"><param name="Local" value="classGraphManager.html#accc9d42e3f252a61e0d52889fd92c566"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
-  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Variables"><param name="Local" value="functions_vars.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   </UL>
 <LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="ImageNumber" value="1"></OBJECT>
@@ -36,8 +53,50 @@
     <UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="graphUtilities"><param name="Local" value="dir_b5e0a4c2abe2f4cb1bbfa97b52316a11.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphManager.h"><param name="Local" value="graphManager_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphManager.cpp"><param name="Local" value="graphManager_8cpp.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="graphManager.h"><param name="Local" value="graphManager_8h.html"><param name="ImageNumber" value="11"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="graphChild"><param name="Local" value="structgraphChild.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="graphChild"><param name="Local" value="structgraphChild.html#afba68e44a51d51cba81046be0383f35b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="edgeOrigin"><param name="Local" value="structgraphChild.html#a90ff9f6cd9e7e02c7f538563b8864535"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="graph"><param name="Local" value="structgraphChild.html#a3e8eccf2686c631f78f89ce3ea7ef446"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="nodeOrigin"><param name="Local" value="structgraphChild.html#ad23326081bde17e5b81d96fe1e274076"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#a341edfa6998d7448fddea1035d937022"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="GraphManager"><param name="Local" value="classGraphManager.html#a7431235ac2e908222d0aa378769e5995"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="~GraphManager"><param name="Local" value="classGraphManager.html#aac8a4298968f5fd3698ab15d6127458a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="addEdge"><param name="Local" value="classGraphManager.html#af7e1254c8c40b94ce005cef87c5b649a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="addEdgeChild"><param name="Local" value="classGraphManager.html#a9888881ba43a607e73791ddddad4444b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="addNode"><param name="Local" value="classGraphManager.html#a3857f4b72cec739b65cebcb20e74ebdf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="addNodeChild"><param name="Local" value="classGraphManager.html#a6732352df1ad2fa1e6953759e960918d"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="exportGML"><param name="Local" value="classGraphManager.html#a1b15356c020e8d8e88d3910be51ed7e8"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="exportSVG"><param name="Local" value="classGraphManager.html#aabf0249928a4d4947338eeb8f63e6f23"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="genChild"><param name="Local" value="classGraphManager.html#a9433db8c77f8c9bd4744a35c7c553928"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="genRandomGraph"><param name="Local" value="classGraphManager.html#aa01d24fb185701aaab0fc7f2ac70640b"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getChildren"><param name="Local" value="classGraphManager.html#a24cc3fef7b6609b81f27977aa7924426"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getGraph"><param name="Local" value="classGraphManager.html#a7e5b267d61a2826a6d02335b4f42ddfa"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="getGraphAttribute"><param name="Local" value="classGraphManager.html#a8f4ce0a6edccb171811cc601d2082584"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="graphDefaultView"><param name="Local" value="classGraphManager.html#a430d0dfd243c7b61c18acb26d4f9c105"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="init"><param name="Local" value="classGraphManager.html#a85a752b05da3679da38bd54599581331"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="setChildView"><param name="Local" value="classGraphManager.html#a3508477e21623f2fecee86bd10f16337"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="children"><param name="Local" value="classGraphManager.html#ae216060adf39a4bfa50e2384154f08a3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="graph"><param name="Local" value="classGraphManager.html#a7ab7072cdcb7dd0dff4d2f013afb4265"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="graphAttribute"><param name="Local" value="classGraphManager.html#accc9d42e3f252a61e0d52889fd92c566"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
       </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="main.cpp"><param name="Local" value="main_8cpp.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="main"><param name="Local" value="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="File Members"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="globals_func.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   </UL>
 </UL>

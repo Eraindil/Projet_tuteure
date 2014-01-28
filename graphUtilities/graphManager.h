@@ -18,7 +18,7 @@
 
 /**
  * \struct graphChild
- * \brief is a struct that contain a graph link to an other graph.
+ * \brief graphChild is a struct that contain a graph link to an other graph.
  */
 struct graphChild{
 	ogdf::Graph graph;
@@ -30,39 +30,65 @@ struct graphChild{
 
 /**
  * \class GraphManager
- * \brief is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.
+ * \brief GraphManager is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.
  */
 class GraphManager{
 
 public:
 
+	/**
+	 * \fn GraphManager
+	 * \brief This constructor init the object with an empty graph and graphAttributes relative to the graph.
+	 */
 	GraphManager(void);
 
+	/**
+	 * \fn GraphManager
+	 * \brief This constructor init the object with graph and graphAttributes from a gml file.
+	 * @param path is the path to the gml file.
+	 */
 	GraphManager(ogdf::String path);
 
+	/**
+	 *
+	 */
 	~GraphManager(void);
 
+	/**
+	 * \fn genRandomGraph
+	 * \brief This method can generate a random graph.
+	 * @param n is the number of nodes.
+	 * @param e is the number of edges.
+	 */
 	void genRandomGraph(int n, int e);
 
 	/**
 	 * \fn addNode
-	 * \brief add a node to the main graph
+	 * \brief this method add a node to the main graph
 	 */
 	void addNode(void);
 
 	/**
 	 * \fn addEdge
-	 * \brief add an edge to the main graph
+	 * \brief this method add an edge to the main graph
 	 */
 	void addEdge(void);
 
+	/**
+	 * \fn getGraph
+	 * @return this->graph
+	 */
 	ogdf::Graph& getGraph(void);
 
+	/**
+	 * \fn getGraphAttribute
+	 * @return this->graphAttribute
+	 */
 	ogdf::GraphAttributes& getGraphAttribute(void);
 
 	/**
 	 * \fn genChild
-	 * \brief generate a graph and push it in the list of graph child.
+	 * \brief this function generate a graph and push it in the list of graph child.
 	 * @return the graphChild generated
 	 */
 	graphChild genChild(void);
@@ -70,7 +96,7 @@ public:
 
 	/**
 	 * \fn addNodeChild
-	 * \brief add a node to a graph corresponding to a node of the main graph
+	 * \brief This method add a node to a graph corresponding to a node of the main graph
 	 * @param gC the graph child target
 	 * @param n node from the main graph
 	 */
@@ -78,7 +104,7 @@ public:
 
 	/**
 	 * \fn addEdgeChild
-	 * \brief add an edge to a graph corresponding to an edge of the main graph
+	 * \brief This method add an edge to a graph corresponding to an edge of the main graph
 	 * @param gC the graph child target
 	 * @param e	edge from the main graph
 	 */
@@ -86,28 +112,39 @@ public:
 
 	/**
 	 * \fn getChildren
-	 * @return the vector containing all the children of the current graph.
+	 * @return this->children
 	 */
 	std::vector<graphChild> getChildren(void);
 
+	/**
+	 * \fn graphDeafultView
+	 * \brief This method set default color on the graph.
+	 */
 	void graphDefaultView(void);
 
 	/**
 	 * \fn exportGML
-	 * \brief export the current graph and its attributes to a gml file.
+	 * \brief this method export the current graph and its attributes to a gml file.
 	 * @param path is the destination path
+	 * @param defaultLayout define if the default layout will be use.
 	 */
 	void exportGML(ogdf::String path, bool defaultLayout);
 
+	/**
+	 * \fn exportSVG
+	 * \brief this method export the current graph and its attributes to a svg file.
+	 * @param path is the destination path
+	 * @param defaultLayout define if the default layout will be use.
+	 */
 	void exportSVG(ogdf::String path, bool defaultLayout);
 
 	/**
-	 * \fn exportChildGml
-	 * \brief export the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child.
+	 * \fn setChildView
+	 * \brief this method set the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child.
 	 * @param gC is the graph child
-	 * @param path is the path of the output destination
+	 * @param c is the color use to show the graph child. Red by default.
 	 */
-	void setChildView(graphChild & gC);
+	void setChildView(graphChild & gC, ogdf::String c = "red");
 
 
 
@@ -115,7 +152,7 @@ private:
 
 	/**
 	 * \fn init
-	 * \brief permit to share the default constructor code.
+	 * \brief This method permit to share the default constructor code.
 	 */
 	void init(void);
 

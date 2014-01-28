@@ -4,7 +4,7 @@
 
 int main()
 {
-	GraphManager gm("Abvtm.gml");
+	GraphManager gm("Abvt.gml");
 	graphChild gtruc = gm.genChild();
 	srand(time(NULL));
 	ogdf::edge e;

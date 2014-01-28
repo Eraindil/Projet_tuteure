@@ -1,51 +1,134 @@
-\hypertarget{classGraphManager}{\section{Graph\-Manager Class Reference}
+\subsection{Graph\-Manager Class Reference}
 \label{classGraphManager}\index{Graph\-Manager@{Graph\-Manager}}
-}
 
 
-is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.  
+\doxyref{Graph\-Manager}{p.}{classGraphManager} is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly.  
 
 
 
 
 {\ttfamily \#include $<$graph\-Manager.\-h$>$}
 
-\subsection*{Public Member Functions}
+\subsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}{void \hyperlink{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}{add\-Node} (void)}\label{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}
-
-\begin{DoxyCompactList}\small\item\em add a node to the main graph \end{DoxyCompactList}\item 
-\hypertarget{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}{void \hyperlink{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}{add\-Edge} (void)}\label{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}
-
-\begin{DoxyCompactList}\small\item\em add an edge to the main graph \end{DoxyCompactList}\item 
-\hyperlink{structgraphChild}{graph\-Child} \hyperlink{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}{gen\-Child} (void)
-\begin{DoxyCompactList}\small\item\em generate a graph and push it in the list of graph child. \end{DoxyCompactList}\item 
-void \hyperlink{classGraphManager_a6732352df1ad2fa1e6953759e960918d}{add\-Node\-Child} (\hyperlink{structgraphChild}{graph\-Child} \&g\-C, ogdf\-::node \&n)
-\begin{DoxyCompactList}\small\item\em add a node to a graph corresponding to a node of the main graph \end{DoxyCompactList}\item 
-void \hyperlink{classGraphManager_a9888881ba43a607e73791ddddad4444b}{add\-Edge\-Child} (\hyperlink{structgraphChild}{graph\-Child} \&g\-C, ogdf\-::edge \&e)
-\begin{DoxyCompactList}\small\item\em add an edge to a graph corresponding to an edge of the main graph \end{DoxyCompactList}\item 
-std\-::vector$<$ \hyperlink{structgraphChild}{graph\-Child} $>$ \hyperlink{classGraphManager_a24cc3fef7b6609b81f27977aa7924426}{get\-Children} (void)
+{\bf Graph\-Manager} (void)
+\begin{DoxyCompactList}\small\item\em This constructor init the object with an empty graph and graph\-Attributes relative to the graph. \end{DoxyCompactList}\item 
+{\bf Graph\-Manager} (ogdf\-::\-String path)
 \item 
-void \hyperlink{classGraphManager_a1b15356c020e8d8e88d3910be51ed7e8}{export\-G\-M\-L} (ogdf\-::\-String path, bool default\-Layout)
-\begin{DoxyCompactList}\small\item\em export the current graph and its attributes to a gml file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+{\bf $\sim$\-Graph\-Manager} (void)
+\item 
+void {\bf gen\-Random\-Graph} (int n, int e)
+\begin{DoxyCompactList}\small\item\em This method can generate a random graph. \end{DoxyCompactList}\item 
+void {\bf add\-Node} (void)
+\begin{DoxyCompactList}\small\item\em this method add a node to the main graph \end{DoxyCompactList}\item 
+void {\bf add\-Edge} (void)
+\begin{DoxyCompactList}\small\item\em this method add an edge to the main graph \end{DoxyCompactList}\item 
+ogdf\-::\-Graph \& {\bf get\-Graph} (void)
+\item 
+ogdf\-::\-Graph\-Attributes \& {\bf get\-Graph\-Attribute} (void)
+\item 
+{\bf graph\-Child} {\bf gen\-Child} (void)
+\begin{DoxyCompactList}\small\item\em this function generate a graph and push it in the list of graph child. \end{DoxyCompactList}\item 
+void {\bf add\-Node\-Child} ({\bf graph\-Child} \&g\-C, ogdf\-::node \&n)
+\begin{DoxyCompactList}\small\item\em This method add a node to a graph corresponding to a node of the main graph. \end{DoxyCompactList}\item 
+void {\bf add\-Edge\-Child} ({\bf graph\-Child} \&g\-C, ogdf\-::edge \&e)
+\begin{DoxyCompactList}\small\item\em This method add an edge to a graph corresponding to an edge of the main graph. \end{DoxyCompactList}\item 
+std\-::vector$<$ {\bf graph\-Child} $>$ {\bf get\-Children} (void)
+\item 
+void {\bf graph\-Default\-View} (void)
+\item 
+void {\bf export\-G\-M\-L} (ogdf\-::\-String path, bool default\-Layout)
+\begin{DoxyCompactList}\small\item\em this method export the current graph and its attributes to a gml file. \end{DoxyCompactList}\item 
+void {\bf export\-S\-V\-G} (ogdf\-::\-String path, bool default\-Layout)
+\begin{DoxyCompactList}\small\item\em this method export the current graph and its attributes to a svg file. \end{DoxyCompactList}\item 
+void {\bf set\-Child\-View} ({\bf graph\-Child} \&g\-C, ogdf\-::\-String c=\char`\"{}red\char`\"{})
+\begin{DoxyCompactList}\small\item\em this method set the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init} (void)
+\begin{DoxyCompactList}\small\item\em This method permit to share the default constructor code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ogdf\-::\-Graph {\bf graph}
+\item 
+ogdf\-::\-Graph\-Attributes {\bf graph\-Attribute}
+\item 
+std\-::vector$<$ {\bf graph\-Child} $>$ {\bf children}
+\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
-is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly. 
+\subsubsection{Detailed Description}
+\doxyref{Graph\-Manager}{p.}{classGraphManager} is a class that create and manage some graph. This class can create paramethized undirected graph from a file or randomly. 
 
-\subsection{Member Function Documentation}
-\hypertarget{classGraphManager_a9888881ba43a607e73791ddddad4444b}{\index{Graph\-Manager@{Graph\-Manager}!add\-Edge\-Child@{add\-Edge\-Child}}
+\subsubsection{Constructor \& Destructor Documentation}
+\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
+\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
+\paragraph[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::\-Graph\-Manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a341edfa6998d7448fddea1035d937022}
+
+
+This constructor init the object with an empty graph and graph\-Attributes relative to the graph. 
+
+This constructor init the object with graph and graph\-Attributes from a gml file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the path to the gml file. \\
+\hline
+\end{DoxyParams}
+
+
+References init().
+
+\index{Graph\-Manager@{Graph\-Manager}!Graph\-Manager@{Graph\-Manager}}
+\index{Graph\-Manager@{Graph\-Manager}!GraphManager@{Graph\-Manager}}
+\paragraph[{Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::\-Graph\-Manager (
+\begin{DoxyParamCaption}
+\item[{ogdf\-::\-String}]{path}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a7431235ac2e908222d0aa378769e5995}
+
+
+References graph, graph\-Attribute, and init().
+
+\index{Graph\-Manager@{Graph\-Manager}!$\sim$\-Graph\-Manager@{$\sim$\-Graph\-Manager}}
+\index{$\sim$\-Graph\-Manager@{$\sim$\-Graph\-Manager}!GraphManager@{Graph\-Manager}}
+\paragraph[{$\sim$\-Graph\-Manager}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::$\sim$\-Graph\-Manager (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_aac8a4298968f5fd3698ab15d6127458a}
+
+
+\subsubsection{Member Function Documentation}
+\index{Graph\-Manager@{Graph\-Manager}!add\-Edge@{add\-Edge}}
+\index{add\-Edge@{add\-Edge}!GraphManager@{Graph\-Manager}}
+\paragraph[{add\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Edge (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_af7e1254c8c40b94ce005cef87c5b649a}
+
+
+this method add an edge to the main graph 
+
+\index{Graph\-Manager@{Graph\-Manager}!add\-Edge\-Child@{add\-Edge\-Child}}
 \index{add\-Edge\-Child@{add\-Edge\-Child}!GraphManager@{Graph\-Manager}}
-\subsubsection[{add\-Edge\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Edge\-Child (
+\paragraph[{add\-Edge\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Edge\-Child (
 \begin{DoxyParamCaption}
 \item[{{\bf graph\-Child} \&}]{g\-C, }
 \item[{ogdf\-::edge \&}]{e}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a9888881ba43a607e73791ddddad4444b}
+)}\label{classGraphManager_a9888881ba43a607e73791ddddad4444b}
 
 
-add an edge to a graph corresponding to an edge of the main graph 
+This method add an edge to a graph corresponding to an edge of the main graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -54,17 +137,36 @@ add an edge to a graph corresponding to an edge of the main graph
 {\em e} & edge from the main graph \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGraphManager_a6732352df1ad2fa1e6953759e960918d}{\index{Graph\-Manager@{Graph\-Manager}!add\-Node\-Child@{add\-Node\-Child}}
+
+
+References graph\-Child\-::edge\-Origin, graph\-Child\-::graph, and graph\-Child\-::node\-Origin.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!add\-Node@{add\-Node}}
+\index{add\-Node@{add\-Node}!GraphManager@{Graph\-Manager}}
+\paragraph[{add\-Node}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Node (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a3857f4b72cec739b65cebcb20e74ebdf}
+
+
+this method add a node to the main graph 
+
+\index{Graph\-Manager@{Graph\-Manager}!add\-Node\-Child@{add\-Node\-Child}}
 \index{add\-Node\-Child@{add\-Node\-Child}!GraphManager@{Graph\-Manager}}
-\subsubsection[{add\-Node\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Node\-Child (
+\paragraph[{add\-Node\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::add\-Node\-Child (
 \begin{DoxyParamCaption}
 \item[{{\bf graph\-Child} \&}]{g\-C, }
 \item[{ogdf\-::node \&}]{n}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a6732352df1ad2fa1e6953759e960918d}
+)}\label{classGraphManager_a6732352df1ad2fa1e6953759e960918d}
 
 
-add a node to a graph corresponding to a node of the main graph 
+This method add a node to a graph corresponding to a node of the main graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -73,50 +175,247 @@ add a node to a graph corresponding to a node of the main graph
 {\em n} & node from the main graph \\
 \hline
 \end{DoxyParams}
-\hypertarget{classGraphManager_a1b15356c020e8d8e88d3910be51ed7e8}{\index{Graph\-Manager@{Graph\-Manager}!export\-G\-M\-L@{export\-G\-M\-L}}
+
+
+References graph\-Child\-::graph, and graph\-Child\-::node\-Origin.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!export\-G\-M\-L@{export\-G\-M\-L}}
 \index{export\-G\-M\-L@{export\-G\-M\-L}!GraphManager@{Graph\-Manager}}
-\subsubsection[{export\-G\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::export\-G\-M\-L (
+\paragraph[{export\-G\-M\-L}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::export\-G\-M\-L (
 \begin{DoxyParamCaption}
 \item[{ogdf\-::\-String}]{path, }
 \item[{bool}]{default\-Layout}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a1b15356c020e8d8e88d3910be51ed7e8}
+)}\label{classGraphManager_a1b15356c020e8d8e88d3910be51ed7e8}
 
 
-export the current graph and its attributes to a gml file. 
+this method export the current graph and its attributes to a gml file. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em path} & is the destination path \\
 \hline
+{\em default\-Layout} & define if the default layout will be use. \\
+\hline
 \end{DoxyParams}
-\hypertarget{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}{\index{Graph\-Manager@{Graph\-Manager}!gen\-Child@{gen\-Child}}
+
+
+References graph, and graph\-Attribute.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!export\-S\-V\-G@{export\-S\-V\-G}}
+\index{export\-S\-V\-G@{export\-S\-V\-G}!GraphManager@{Graph\-Manager}}
+\paragraph[{export\-S\-V\-G}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::export\-S\-V\-G (
+\begin{DoxyParamCaption}
+\item[{ogdf\-::\-String}]{path, }
+\item[{bool}]{default\-Layout}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_aabf0249928a4d4947338eeb8f63e6f23}
+
+
+this method export the current graph and its attributes to a svg file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & is the destination path \\
+\hline
+{\em default\-Layout} & define if the default layout will be use. \\
+\hline
+\end{DoxyParams}
+
+
+References graph, and graph\-Attribute.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!gen\-Child@{gen\-Child}}
 \index{gen\-Child@{gen\-Child}!GraphManager@{Graph\-Manager}}
-\subsubsection[{gen\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::gen\-Child (
+\paragraph[{gen\-Child}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::gen\-Child (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}
+)}\label{classGraphManager_a9433db8c77f8c9bd4744a35c7c553928}
 
 
-generate a graph and push it in the list of graph child. 
+this function generate a graph and push it in the list of graph child. 
 
 \begin{DoxyReturn}{Returns}
-the \hyperlink{structgraphChild}{graph\-Child} generated 
+the \doxyref{graph\-Child}{p.}{structgraphChild} generated 
 \end{DoxyReturn}
-\hypertarget{classGraphManager_a24cc3fef7b6609b81f27977aa7924426}{\index{Graph\-Manager@{Graph\-Manager}!get\-Children@{get\-Children}}
+
+
+References children.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!gen\-Random\-Graph@{gen\-Random\-Graph}}
+\index{gen\-Random\-Graph@{gen\-Random\-Graph}!GraphManager@{Graph\-Manager}}
+\paragraph[{gen\-Random\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::gen\-Random\-Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{int}]{e}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_aa01d24fb185701aaab0fc7f2ac70640b}
+
+
+This method can generate a random graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & is the number of nodes. \\
+\hline
+{\em e} & is the number of edges. \\
+\hline
+\end{DoxyParams}
+
+
+References graph.
+
+\index{Graph\-Manager@{Graph\-Manager}!get\-Children@{get\-Children}}
 \index{get\-Children@{get\-Children}!GraphManager@{Graph\-Manager}}
-\subsubsection[{get\-Children}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::get\-Children (
+\paragraph[{get\-Children}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::get\-Children (
 \begin{DoxyParamCaption}
 \item[{void}]{}
 \end{DoxyParamCaption}
-)}}\label{classGraphManager_a24cc3fef7b6609b81f27977aa7924426}
+)}\label{classGraphManager_a24cc3fef7b6609b81f27977aa7924426}
 \begin{DoxyReturn}{Returns}
-the vector containing all the children of the current graph. 
+this-\/$>$children 
 \end{DoxyReturn}
+
+
+References children.
+
+\index{Graph\-Manager@{Graph\-Manager}!get\-Graph@{get\-Graph}}
+\index{get\-Graph@{get\-Graph}!GraphManager@{Graph\-Manager}}
+\paragraph[{get\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::get\-Graph (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a7e5b267d61a2826a6d02335b4f42ddfa}
+\begin{DoxyReturn}{Returns}
+this-\/$>$graph 
+\end{DoxyReturn}
+
+
+References graph.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!get\-Graph\-Attribute@{get\-Graph\-Attribute}}
+\index{get\-Graph\-Attribute@{get\-Graph\-Attribute}!GraphManager@{Graph\-Manager}}
+\paragraph[{get\-Graph\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::get\-Graph\-Attribute (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a8f4ce0a6edccb171811cc601d2082584}
+\begin{DoxyReturn}{Returns}
+this-\/$>$graph\-Attribute 
+\end{DoxyReturn}
+
+
+References graph\-Attribute.
+
+\index{Graph\-Manager@{Graph\-Manager}!graph\-Default\-View@{graph\-Default\-View}}
+\index{graph\-Default\-View@{graph\-Default\-View}!GraphManager@{Graph\-Manager}}
+\paragraph[{graph\-Default\-View}]{\setlength{\rightskip}{0pt plus 5cm}void Graph\-Manager\-::graph\-Default\-View (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a430d0dfd243c7b61c18acb26d4f9c105}
+
+
+References graph, and graph\-Attribute.
+
+
+
+Referenced by main().
+
+\index{Graph\-Manager@{Graph\-Manager}!init@{init}}
+\index{init@{init}!GraphManager@{Graph\-Manager}}
+\paragraph[{init}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\label{classGraphManager_a85a752b05da3679da38bd54599581331}
+
+
+This method permit to share the default constructor code. 
+
+
+
+References graph, and graph\-Attribute.
+
+
+
+Referenced by Graph\-Manager().
+
+\index{Graph\-Manager@{Graph\-Manager}!set\-Child\-View@{set\-Child\-View}}
+\index{set\-Child\-View@{set\-Child\-View}!GraphManager@{Graph\-Manager}}
+\paragraph[{set\-Child\-View}]{\setlength{\rightskip}{0pt plus 5cm}Graph\-Manager\-::set\-Child\-View (
+\begin{DoxyParamCaption}
+\item[{{\bf graph\-Child} \&}]{g\-C, }
+\item[{ogdf\-::\-String}]{c = {\ttfamily \char`\"{}red\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{classGraphManager_a3508477e21623f2fecee86bd10f16337}
+
+
+this method set the current graph with some color on the edges and nodes that correspond of the nodes and edges of the graph child. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g\-C} & is the graph child \\
+\hline
+{\em c} & is the color use to show the graph child. Red by default. \\
+\hline
+\end{DoxyParams}
+
+
+References graph\-Child\-::edge\-Origin, graph\-Child\-::graph, graph\-Attribute, and graph\-Child\-::node\-Origin.
+
+
+
+Referenced by main().
+
+
+
+\subsubsection{Member Data Documentation}
+\index{Graph\-Manager@{Graph\-Manager}!children@{children}}
+\index{children@{children}!GraphManager@{Graph\-Manager}}
+\paragraph[{children}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf graph\-Child}$>$ Graph\-Manager\-::children\hspace{0.3cm}{\ttfamily [private]}}\label{classGraphManager_ae216060adf39a4bfa50e2384154f08a3}
+Contains all children of the current graph 
+
+Referenced by gen\-Child(), and get\-Children().
+
+\index{Graph\-Manager@{Graph\-Manager}!graph@{graph}}
+\index{graph@{graph}!GraphManager@{Graph\-Manager}}
+\paragraph[{graph}]{\setlength{\rightskip}{0pt plus 5cm}ogdf\-::\-Graph Graph\-Manager\-::graph\hspace{0.3cm}{\ttfamily [private]}}\label{classGraphManager_a7ab7072cdcb7dd0dff4d2f013afb4265}
+Contains the graph 
+
+Referenced by export\-G\-M\-L(), export\-S\-V\-G(), gen\-Random\-Graph(), get\-Graph(), graph\-Default\-View(), Graph\-Manager(), and init().
+
+\index{Graph\-Manager@{Graph\-Manager}!graph\-Attribute@{graph\-Attribute}}
+\index{graph\-Attribute@{graph\-Attribute}!GraphManager@{Graph\-Manager}}
+\paragraph[{graph\-Attribute}]{\setlength{\rightskip}{0pt plus 5cm}ogdf\-::\-Graph\-Attributes Graph\-Manager\-::graph\-Attribute\hspace{0.3cm}{\ttfamily [private]}}\label{classGraphManager_accc9d42e3f252a61e0d52889fd92c566}
+Contains the attributes of the graph 
+
+Referenced by export\-G\-M\-L(), export\-S\-V\-G(), get\-Graph\-Attribute(), graph\-Default\-View(), Graph\-Manager(), init(), and set\-Child\-View().
+
 
 
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-graph\-Utilities/graph\-Manager.\-h\item 
-graph\-Utilities/graph\-Manager.\-cpp\end{DoxyCompactItemize}
+graph\-Utilities/{\bf graph\-Manager.\-h}\item 
+graph\-Utilities/{\bf graph\-Manager.\-cpp}\end{DoxyCompactItemize}
