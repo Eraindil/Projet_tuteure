@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" version="1.1" baseProfile="full" width="173.0000000px" height="165.0000000px" viewBox="0 0 173.0000000 165.0000000">
+<line x1="145.0000000" y1="78.00000000" x2="135.0000000" y2="46.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="145.0000000" y1="78.00000000" x2="123.0000000" y2="88.00000000" stroke="blue" stroke-width="1.000000000px" />
+<line x1="145.0000000" y1="78.00000000" x2="140.0000000" y2="112.0000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="145.0000000" y1="78.00000000" x2="167.0000000" y2="94.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="111.0000000" y1="108.0000000" x2="125.0000000" y2="134.0000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="111.0000000" y1="108.0000000" x2="140.0000000" y2="102.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="111.0000000" y1="108.0000000" x2="123.0000000" y2="88.00000000" stroke="blue" stroke-width="1.000000000px" />
+<line x1="111.0000000" y1="108.0000000" x2="140.0000000" y2="112.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="111.0000000" y1="108.0000000" x2="80.00000000" y2="90.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="135.0000000" y1="46.00000000" x2="112.0000000" y2="23.00000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="135.0000000" y1="46.00000000" x2="140.0000000" y2="19.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="140.0000000" y1="19.00000000" x2="112.0000000" y2="23.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="140.0000000" y1="112.0000000" x2="154.0000000" y2="138.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="140.0000000" y1="112.0000000" x2="125.0000000" y2="134.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="140.0000000" y1="102.0000000" x2="167.0000000" y2="94.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="125.0000000" y1="134.0000000" x2="140.0000000" y2="159.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="140.0000000" y1="159.0000000" x2="154.0000000" y2="138.0000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="112.0000000" y1="23.00000000" x2="83.00000000" y2="10.00000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="112.0000000" y1="23.00000000" x2="88.00000000" y2="33.00000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="112.0000000" y1="23.00000000" x2="97.00000000" y2="6.000000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="74.00000000" y1="61.00000000" x2="88.00000000" y2="33.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="74.00000000" y1="61.00000000" x2="80.00000000" y2="90.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="74.00000000" y1="61.00000000" x2="48.00000000" y2="48.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="88.00000000" y1="33.00000000" x2="97.00000000" y2="6.000000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="50.00000000" y1="83.00000000" x2="28.00000000" y2="60.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="50.00000000" y1="83.00000000" x2="80.00000000" y2="90.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="28.00000000" y1="60.00000000" x2="29.00000000" y2="30.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="6.000000000" y1="13.00000000" x2="29.00000000" y2="30.00000000" stroke="red" stroke-width="1.000000000px" />
+<line x1="29.00000000" y1="30.00000000" x2="52.00000000" y2="10.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="29.00000000" y1="30.00000000" x2="48.00000000" y2="48.00000000" stroke="black" stroke-width="1.000000000px" />
+<line x1="52.00000000" y1="10.00000000" x2="83.00000000" y2="10.00000000" stroke="black" stroke-width="1.000000000px" />
+<rect x="140.0000000" y="73.00000000" width="10.00000000" height="10.00000000" fill="blue" stroke="" stroke-width="1.000000000px" />
+<text x="140.0000000" y="78.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Washington CDC</text>
+<rect x="106.0000000" y="103.0000000" width="10.00000000" height="10.00000000" fill="blue" stroke="" stroke-width="1.000000000px" />
+<text x="106.0000000" y="108.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">New York</text>
+<rect x="130.0000000" y="41.00000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="130.0000000" y="46.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Atlanta</text>
+<rect x="135.0000000" y="14.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="135.0000000" y="19.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Miami</text>
+<rect x="118.0000000" y="83.00000000" width="10.00000000" height="10.00000000" fill="blue" stroke="" stroke-width="1.000000000px" />
+<text x="118.0000000" y="88.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Boston</text>
+<rect x="135.0000000" y="107.0000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="135.0000000" y="112.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">London</text>
+<rect x="135.0000000" y="97.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="135.0000000" y="102.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Philadelphia</text>
+<rect x="162.0000000" y="89.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="162.0000000" y="94.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Baltimore</text>
+<rect x="120.0000000" y="129.0000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="120.0000000" y="134.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Amsterdam</text>
+<rect x="135.0000000" y="154.0000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="135.0000000" y="159.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Frankfurt</text>
+<rect x="107.0000000" y="18.00000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="107.0000000" y="23.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Houston</text>
+<rect x="69.00000000" y="56.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="69.00000000" y="61.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">None</text>
+<rect x="149.0000000" y="133.0000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="149.0000000" y="138.0000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Paris</text>
+<rect x="83.00000000" y="28.00000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="83.00000000" y="33.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Dallas</text>
+<rect x="92.00000000" y="1.000000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="92.00000000" y="6.000000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Austin</text>
+<rect x="45.00000000" y="78.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="45.00000000" y="83.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Seattle</text>
+<rect x="23.00000000" y="55.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="23.00000000" y="60.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Portland</text>
+<rect x="1.000000000" y="8.000000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="1.000000000" y="13.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Tokyo</text>
+<rect x="24.00000000" y="25.00000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="24.00000000" y="30.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">San Francisco</text>
+<rect x="47.00000000" y="5.000000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="47.00000000" y="10.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Los Angeles</text>
+<rect x="78.00000000" y="5.000000000" width="10.00000000" height="10.00000000" fill="red" stroke="" stroke-width="1.000000000px" />
+<text x="78.00000000" y="10.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Phoenix</text>
+<rect x="43.00000000" y="43.00000000" width="10.00000000" height="10.00000000" fill="black" stroke="" stroke-width="1.000000000px" />
+<text x="43.00000000" y="48.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Denver</text>
+<rect x="75.00000000" y="85.00000000" width="10.00000000" height="10.00000000" fill="blue" stroke="" stroke-width="1.000000000px" />
+<text x="75.00000000" y="90.00000000" textLength="10.00000000" font-size="3" fill="#000000" lengthAdjust="spacingAndGlyphs">Chicago</text>
+</svg>

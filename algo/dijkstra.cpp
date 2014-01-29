@@ -5,10 +5,7 @@
  *      Author: eraindil
  */
 
-#include <ogdf/basic/Graph.h>
-#include <ogdf/basic/GraphAttributes.h>
-#include <ogdf/graphalg/Dijkstra.h>
-#include "../graphUtilities/graphManager.h"
+#include "dijkstra.h"
 
 graphChild dijkstraSubGraph(GraphManager gm, ogdf::node origin, ogdf::node target, bool weightInit){
 	ogdf::EdgeArray<double> weight(gm.getGraph());
@@ -17,6 +14,7 @@ graphChild dijkstraSubGraph(GraphManager gm, ogdf::node origin, ogdf::node targe
 	if(weightInit){
 		ogdf::edge e;
 		forall_edges(e,gm.getGraph()){
+
 			weight[e] = 10.0;
 		}
 	}else{
@@ -31,16 +29,15 @@ graphChild dijkstraSubGraph(GraphManager gm, ogdf::node origin, ogdf::node targe
 	graphChild gch = gm.genChild();
 
 	ogdf::node pred = target;
-	gm.addNodeChild(gch,target);
-	while(pred != origin){
+	gm.addNodeChild(gch,pred);
+	while(predec[pred] != predec[origin]){
 		ogdf::node n;
-		if(predec[pred]->source() != pred){
+		if(predec[predec[pred]->source()] != predec[pred]){
 			n = predec[pred]->source();
-			gm.addNodeChild(gch,n);
 		}else{
 			n = predec[pred]->target();
-			gm.addNodeChild(gch,n);
 		}
+		gm.addNodeChild(gch,n);
 		gm.addEdgeChild(gch,predec[pred]);
 		pred = n;
 	}

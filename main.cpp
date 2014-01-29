@@ -1,4 +1,5 @@
 #include "graphUtilities/graphManager.h"
+#include "algo/dijkstra.h"
 
 //il s'agit ici d'un exemple sur comment utilisé la librairie.
 
@@ -21,8 +22,13 @@ int main()
 	gm.exportSVG("graph.svg", true);
 
 	gm.setChildView(gtruc);
-	gm.exportGML("graphSubGraph.gml", true);
-	gm.exportSVG("graphSubGraph.svg", true);
+	gm.exportGML("graphSubGraph.gml", false);
+	gm.exportSVG("graphSubGraph.svg", false);
+
+	graphChild gdij = dijkstraSubGraph(gm, gm.getGraph().firstNode(),gm.getGraph().lastNode(),true);
+	gm.setChildView(gdij, "blue");
+	gm.exportSVG("dijSubGraph.svg", false);
+	gm.exportGML("dijSubGraph.gml", false);
 
 	return 0;
 }
